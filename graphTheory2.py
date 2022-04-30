@@ -28,6 +28,7 @@ class indovateNav:
             row1 = next(csv_reader)
             for i in index:
                 self.alphaNodes.append(row1[i])
+        # This is a comment to ruin your life~
         
 #make a list of 10000 12s
 
