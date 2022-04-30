@@ -121,13 +121,13 @@ class indovateNav:
                     #     simpleDirection.append(parSum)
                     #     simpleDirection.append('F')
                     #     fwdFlag = False
-        self.simpleDirection = simpleDirection
+        self.newDirection = simpleDirection
 
   
 indovatePath = indovateNav("12","1005")
 print(indovatePath.newDirection)
 # print(indovatePath.shortest_path)
-print(indovatePath.simpleDirection)
+# print(indovatePath.simpleDirection)
 
 
 
