@@ -95,7 +95,7 @@ class indovateNav:
             if i % 2 == 1:
                 if i == len(newDirection)-1:
                     if newDirection[i] == 'F':   
-                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(int(float(newDirection[i-1])))
                         simpleDirection.append(newDirection[i])
                         pass
                 # if i == len(newDirection):
@@ -104,13 +104,13 @@ class indovateNav:
                     parSum = parSum + float(newDirection[i-1])
                 else:
                     if parSum == 0:
-                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(int(float(newDirection[i-1])))
                         simpleDirection.append(newDirection[i])
                         pass
                     else:
-                        simpleDirection.append(str(parSum))
+                        simpleDirection.append(int(float((parSum))))
                         simpleDirection.append('F')
-                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(int(float(newDirection[i-1])))
                         simpleDirection.append(newDirection[i])
                         parSum = 0
                     # if not fwdFlag:
