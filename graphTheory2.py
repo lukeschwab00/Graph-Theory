@@ -88,13 +88,46 @@ class indovateNav:
                 newDirection.append(x)
         self.newDirection = newDirection
         
-
-
+        parSum = 0
+        
+        simpleDirection = []
+        for i in range(len(newDirection)):
+            if i % 2 == 1:
+                if i == len(newDirection)-1:
+                    if newDirection[i] == 'F':   
+                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(newDirection[i])
+                        pass
+                # if i == len(newDirection):
+                #     simpleDirection.append(newDirection[i])
+                if newDirection[i] == 'F':
+                    parSum = parSum + float(newDirection[i-1])
+                else:
+                    if parSum == 0:
+                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(newDirection[i])
+                        pass
+                    else:
+                        simpleDirection.append(str(parSum))
+                        simpleDirection.append('F')
+                        simpleDirection.append(newDirection[i-1])
+                        simpleDirection.append(newDirection[i])
+                        parSum = 0
+                    # if not fwdFlag:
+                    #     simpleDirection.append(newDirection[i-1])
+                    #     simpleDirection.append(newDirection[i])
+                    #     parSum = 0
+                    # if fwdFlag:
+                    #     simpleDirection.append(parSum)
+                    #     simpleDirection.append('F')
+                    #     fwdFlag = False
+        self.simpleDirection = simpleDirection
 
   
-indovatePath = indovateNav("10","1402")
+indovatePath = indovateNav("12","1005")
 print(indovatePath.newDirection)
-print(indovatePath.shortest_path)
+# print(indovatePath.shortest_path)
+print(indovatePath.simpleDirection)
 
 
 
